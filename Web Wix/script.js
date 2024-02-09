@@ -5,6 +5,12 @@ let btn = document.querySelector(".cat-button");
 let svgDiv = document.querySelector("#divs")
 let svg = document.querySelector(".svg4")
 // console.log(svgDiv)
+// for smooth scrolling
+const scroll = new LocomotiveScroll({
+    el: document.querySelector('#main'),
+    smooth: true
+});
+
 addBg();
 buttonBorder();
 
