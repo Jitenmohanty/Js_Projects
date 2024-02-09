@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
 }
-
+/* To apply light theme */
 [data-theme="light"] {
     --bg-color: #faefc5;
     --text-color: #333333;
@@ -10,7 +10,7 @@
     --cl-color:black;
 }
 
-/* Dark mode styles */
+/* To apply dark theme */
 [data-theme="dark"] {
     --bg-color: rgba(4, 16, 36, 0.899);
     --text-color: #ffffff;
@@ -20,7 +20,6 @@
 }
 
 body {
-    /* background-color: var(--bg-color); */
     font-family: Arial, sans-serif;
     color: var(--text-color);
 }
@@ -125,10 +124,22 @@ main {
     align-items: center;
     gap: 5vw;
 }
-
+main .left{
+    position: absolute;
+    bottom: 3vw;
+    left:30vw;
+}
+.svg4{
+    position: absolute;
+    top: 12vw;
+    right: 12vw;
+}
 
 main .right {
+    position: relative;
     width: 32vw;
+    top:4vw;
+    left: 5vw;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -188,6 +199,7 @@ footer .right {
     stroke: aqua;
 } */
 
+/* Only mobile responssive */
 @media (max-width:600px) {
     nav h1 {
         font-size: larger;
@@ -201,6 +213,17 @@ footer .right {
         flex-direction: column;
         gap: 8vw;
     }
+    main .left{
+        position: relative!important;
+        bottom: 1vw !important;
+        left:2vw !important;
+    }
+    .svg4{
+        position: absolute !important;
+        top: 18vw !important;
+        right: 3vw !important;
+    }
+
     main .right {
         width: 80vw;
         display: flex;
