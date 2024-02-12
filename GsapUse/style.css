@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    font-family: sans-serif;
+    background-color: rgb(243, 203, 151);
+    height: 100%;
+    width: 100%;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.frame{
+    /* background-color: red; */
+    height: 5vw;
+    padding: 1vw;
+    overflow: hidden;
+    z-index: 5;
+}
+.frame span{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    /* height: 5vw; */
+    font-size: 3vw;
+    text-align: center;
+}
+.circle{
+    height: 3vw;
+    width: 3vw;
+    position: absolute;
+    background-color: aqua;
+    border-radius: 50%;
+    top:0;
+    left: 0;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1).5s;
+}
+.frameList{
+    display: flex;
+    gap: 8vw;
+}

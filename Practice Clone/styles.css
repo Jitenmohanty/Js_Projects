@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.main {
+    padding: 2vw 4vw;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav h3 {
+    padding: 0.7vw 0.9vw;
+    border: 1px solid black;
+    border-radius: 30px;
+    font-weight: 400;
+    font-size: 1.2vw;
+}
+
+nav div:last-child {
+    display: flex;
+}
+
+nav h4{
+    padding: 0.7vw 0.9vw;
+    border-radius: 30px;
+    font-weight: 400;
+    font-size: 1.2vw;
+    background-color: rgb(255, 102, 0);
+    color: wheat;
+    margin-left: 2px;
+}
+nav h6{
+    padding: 0.5vw 0.9vw;
+    border-radius: 30px;
+    font-weight: 400;
+    font-size: 1.2vw;
+    background-color: rgb(255, 102, 0);
+    color: wheat;
+    margin-left: 2px;
+}
+
+nav div:first-child {
+    display: flex;
+}
+
+main h1 {
+font-weight: 300;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    font-size: 10vw;
+    text-align: center;
+}
+
+main img {
+    border-radius: 15px;
+    height: 18vw;
+    width: 15vw;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+img:first-child{
+    transform: translate(-50%, -50%) rotate(-24deg);
+}
+img:nth-child(2){
+    transform: translate(-50%, -50%) rotate(-16deg);
+}
+img:nth-child(3){
+    transform: translate(-50%, -50%) rotate(-8deg);
+}
+
+footer{
+    margin-bottom: 2vw;
+    position: absolute;
+    bottom: 0;
+    width: 92%;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer p{
+    margin-bottom: 7px;
+    height: 7px;
+    width: 7px;
+    border-radius: 50%;
+    background-color: rgb(242, 96, 5);
+}
+footer h5{
+    font-weight: 300;
+}
+footer h3{
+    padding: 0.7vw 0.9vw;
+    border: 1px solid black;
+    border-radius: 30px;
+    font-weight: 300;
+}
+

@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+.main{
+    padding: 2vw 4vw;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+nav .left{
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .left .item2{
+    width: 15vw;
+}
+nav .items{
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+main{
+    margin-top: 7vw;
+}
+main h1{
+    margin-top: 4vw;
+    font-size: 8vw;
+    line-height: 6.5vw;
+    font-weight: 600;
+}
+.case{
+    margin-top: 10vw;
+    display: flex;
+    justify-content: space-between;
+}
+.child{
+    width: 10%;
+    display: flex;
+    justify-content: space-between;
+}
+.imgContainer{
+    margin-top: 5vw;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+img{
+    height: 35vw;
+    width: 40vw;
+    border-radius: 15px;
+}
+footer{
+    margin-top: 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .middle{
+    display: flex;
+    gap:2vw ;
+}
+footer h1{
+    padding: 0.7vw 1.5vw;
+    border: 1px solid black;
+    border-radius: 40%;
+    font-weight: 100;
+}
+
+footer h1:hover{
+    background-color: black;
+    color: aliceblue;
+    cursor: pointer;
+}
+
+footer p{
+    font-weight: 200;
+    color: gray;
+}
+
+footer h3{
+    font-weight: 200;
+    font-size: 2vw;
+}
