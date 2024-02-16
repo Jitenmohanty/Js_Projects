@@ -55,16 +55,44 @@ function buttonBorder() {
     btn.style.border = "1px solid red";
 }
 
-document.getElementById('theme-switcher').addEventListener('change', function () {
-    if (this.checked) {
-        document.documentElement.setAttribute("data-theme", "dark");
-        btn.style.border = "none";
-        removeBg();
-        removePosition();
-    } else {
-        document.documentElement.setAttribute("data-theme", "light");
-        buttonBorder();
-        addBg();
-        addPosition();
-    }
+document.documentElement.setAttribute("data-theme", "light");
+
+const themeToggle = document.getElementById("theme-switcher");
+const themeIcon = document.getElementById("themeIcon");
+
+
+function toggleThemeIcon(isNightMode) {
+  if (isNightMode) {
+    themeIcon.classList.remove("ri-moon-line");
+    themeIcon.classList.add("ri-sun-line");
+  } else {
+    themeIcon.classList.remove("ri-sun-line");
+    themeIcon.classList.add("ri-moon-line");
+  }
+}
+
+toggleThemeIcon(false); // Initially set to light mode
+
+// Listen for theme switch toggle
+themeToggle.addEventListener("change", function () {
+  // Toggle theme icon based on the new theme mode
+  toggleThemeIcon(this.checked); // Pass true for night mode, false for day mode
 });
+
+document
+  .getElementById("theme-switcher")
+  .addEventListener("change", function () {
+    if (this.checked) {
+      document.documentElement.setAttribute("data-theme", "dark");
+      btn.style.border = "none";
+      removeBg();
+      removePosition();
+      // Code to change to dark mode (if needed)
+    } else {
+      document.documentElement.setAttribute("data-theme", "light");
+      buttonBorder();
+      addBg();
+      addPosition();
+      // Code to change to light mode (if needed)
+    }
+  });

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      /* To apply light theme */
+      [data-theme="light"] {
+        --bg-color: #faefc5;
+        --text-color: #333333;
+        --heading-color: #444444;
+        --cl-color: black;
+      }
+
+      /* To apply dark theme */
+      [data-theme="dark"] {
+        --bg-color: rgba(4, 16, 36, 0.899);
+        --text-color: #ffffff;
+        --heading-color: #dddddd;
+        --cl-color: rgb(230, 145, 71);
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        color: var(--text-color);
+        background-color: var(--bg-color);
+        transition: 0.5s;
+        height: 96vh;
+        width: 100%;
+      }
+
+      .mode-switch {
+        margin-top: 1vw;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      /* .mode-switch label {
+        margin-top: 2vw;
+        display: inline-block;
+        position: relative;
+        height: 30px;
+        width: 60px;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+
+      .mode-switch .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgb(84, 69, 69);
+        border-radius: 10px;
+        transition: 0.4s;
+      } */
+
+      /* .mode-switch input:checked + .slider {
+        background-color: #f3ad21;
+      } */
+      input {
+        opacity: 0;
+      }
+#themeIcon{
+    cursor: pointer;
+    
+}
+      /* .mode-switch .slider:before {
+        position: absolute;
+        content: "";
+        height: 25px;
+        width: 25px;
+        left: 3px;
+        bottom: 2px;
+        background-color: rgb(199, 239, 239);
+        transition: 0.4s;
+        border-radius: 50%;
+      }
+
+      .mode-switch input:checked + .slider:before {
+        transform: translateX(30px);
+        background-color: rgb(243, 28, 8);
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="mode-switch">
+      <h1>Lodi Bhai</h1>
+      <label>
+        <input type="checkbox" id="themeToggle" />
+        <!-- <span class="slider"></span> -->
+        <i id="themeIcon" class="ri-moon-line"></i>
+        <!-- Default icon, can be sun or moon -->
+      </label>
+    </div>
+  </body>
+
+  <script>
+    document.documentElement.setAttribute("data-theme", "light");
+
+    const themeToggle = document.getElementById("themeToggle");
+    const themeIcon = document.getElementById("themeIcon");
+
+    // Function to toggle theme icon based on theme mode
+    function toggleThemeIcon(isNightMode) {
+      if (isNightMode) {
+        themeIcon.classList.remove("ri-moon-line");
+        themeIcon.classList.add("ri-sun-line");
+      } else {
+        themeIcon.classList.remove("ri-sun-line");
+        themeIcon.classList.add("ri-moon-line");
+      }
+    }
+
+    // Example usage:
+    // If night mode is active:
+    toggleThemeIcon(false); // Initially set to light mode
+
+    // Listen for theme switch toggle
+    themeToggle.addEventListener("change", function () {
+      // Toggle theme icon based on the new theme mode
+      toggleThemeIcon(this.checked); // Pass true for night mode, false for day mode
+    });
+
+    document
+      .getElementById("themeToggle")
+      .addEventListener("change", function () {
+        if (this.checked) {
+          document.documentElement.setAttribute("data-theme", "dark");
+          // Code to change to dark mode (if needed)
+        } else {
+          document.documentElement.setAttribute("data-theme", "light");
+          // Code to change to light mode (if needed)
+        }
+      });
+  </script>
+</html>
