@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .cardContainer {
+        perspective: 1000px;
+        height: 200px;
+        width: 300px;
+      }
+      .card {
+        height: 100%;
+        width: 100%;
+        transform-style: preserve-3d;
+        transition: transform 0.5s;
+      }
+      .card:hover {
+        transform: rotateY(180deg);
+      }
+
+      .card-face {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        backface-visibility: hidden;
+      }
+      .cardFront {
+        background-color: rgb(238, 83, 83);
+        color: white;
+      }
+
+      .cardBack {
+        background-color: rgb(16, 192, 223);
+        color: rgb(246, 242, 242);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cardContainer">
+      <div class="card">
+        <div class="card-face cardFront">Valentines</div>
+        <div class="card-face cardBack">I Love You</div>
+      </div>
+    </div>
+    <div class="copy">WTF</div>
+    <button id="btn">copy</button>
+  </body>
+  <script>
+        let btn = document.getElementById("btn")
+        let copyItem = document.querySelector(".copy").textContent;
+
+
+        btn.addEventListener("click",(e)=>{
+            navigator.clipboard.writeText(copyItem)
+            btn.innerText = "Copied!"
+        })
+
+  </script>
+</html>

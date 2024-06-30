@@ -10,8 +10,9 @@
 
 const arr = [1, 10, 3, 5, 89];
 arr.splice(1, 2, 55, 89, 20);
-//It omit 1st paramaiter to 3 index
-// ,which means two element.
+
+// {Splice takes start index to how many element delete but it don't count start index,it was changes inside original array also it is take 3rd argument element once to insert on that position}
+// {Slice takes start index to how many element delete but it don't count start index}
 const carr = arr.slice(1, 4);
 // console.log(arr);
 // console.log(carr, "kilo");
@@ -28,7 +29,6 @@ const arr5 = [].concat(...arr3, arr4);
 // console.log(arr5);
 // console.log(arr6.toString());
 // console.log(arr6.join("/"));
-// console.log(arr6);
 // console.log(arr6.slice(-2));
 // console.log(arr4.some((n) => n === 8));
 
@@ -142,3 +142,38 @@ const arrayOfObject = studentData.reduce((group, person) => {
 const g = Object.groupBy(studentData, (person) => person.name);
 // console.log(g);
 
+//Array Push Method Own
+
+Array.prototype.myPush = function(...element){
+  
+  for(let i=0;i<element.length;i++)
+  this[this.length] = element[i];
+  
+    return this.length;
+}
+Array.prototype.myPop = function(){
+if(this.length === 0)return undefined;
+
+  let lastIndex = this.length-1;
+  let lelem = this[lastIndex]
+  this.length = this.length-1;
+  
+    return lelem;
+}
+let arrCusttom = [5,6,8,9,4];
+
+arrCusttom.myPush(99,66,77);
+// console.log(arrCusttom.myPop())
+
+// console.log(arrCusttom)
+
+const arrayToObject = [10,5,4,4,6,6,9];
+
+const ansObject = arrayToObject.reduce((acc,curr)=>{
+  // console.log(acc)
+    if(!acc[curr]) acc[curr] = 1;
+    else acc[curr]++;
+    return acc;
+},{})
+
+console.log(ansObject)

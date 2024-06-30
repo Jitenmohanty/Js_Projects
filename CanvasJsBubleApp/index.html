@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bubbles App - DEV</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    html,
+    body {
+      box-sizing: border-box;
+    }
+    header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 800;
+      font-size: 1vw;
+      margin: 0.6vw 0;
+      font-family: sans-serif;
+    }
+    .main {
+      margin: 0 2.3rem;
+      padding: 1.5rem;
+      display: flex;
+      border: 0.2rem solid black;
+      border-radius: 10px;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column;
+      gap: 0.5vw;
+    }
+    .left {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+    .left > div {
+      height: 8vw;
+      width: 8vw;
+      border-radius: 50%;
+      margin-left: 10px;
+    }
+    .round1 {
+      background-color: yellow;
+    }
+    .round2 {
+      background-color: rgb(23, 87, 236);
+    }
+    .round3 {
+      background-color: red;
+    }
+    .round4 {
+      background-color: green;
+    }
+
+    .left > img {
+      height: 8vw;
+      width: 8vw;
+    }
+    button {
+      position: absolute;
+      right: 5vw;
+      bottom: 0.4vw;
+      padding: 0.3rem 0.9rem;
+      font-weight: bolder;
+      border: 2px solid black;
+      border-right: 5px solid black;
+      border-bottom: 5px solid black;
+      cursor: pointer;
+    }
+    @media screen and (max-width: 500px) {
+      header {
+        font-size: 4vw;
+        margin: 2vw 0;
+      }
+      .main {
+        height: 70vh;
+      }
+      .left > div {
+        height: 16vw;
+        width: 16vw;
+      }
+      .left > img {
+        height: 15vw;
+        width: 15vw;
+      }
+      button {
+        right: 11vw;
+        bottom: 2vw;
+        padding: 0.5rem 2rem;
+        font-size: 5vw;
+      }
+    }
+  </style>
+  <body>
+    <header class="head"><h1>Bubbles App</h1></header>
+    <div class="main">
+      <div class="left">
+        <div class="round round1"></div>
+        <img
+          class="arrow arrow1"
+          src="./left-arrow-svgrepo-com.svg"
+          alt="img"
+        />
+      </div>
+      <div class="left">
+        <div class="round round2"></div>
+        <img
+          class="arrow arrow2"
+          src="./left-arrow-svgrepo-com.svg"
+          alt="img"
+        />
+      </div>
+      <div class="left">
+        <div class="round round3"></div>
+        <img
+          class="arrow arrow3"
+          src="./left-arrow-svgrepo-com.svg"
+          alt="img"
+        />
+      </div>
+      <div class="left">
+        <div class="round round4"></div>
+        <img
+          class="arrow arrow1"
+          src="./left-arrow-svgrepo-com.svg"
+          alt="img"
+        />
+      </div>
+    </div>
+    <button class="btn">Reset</button>
+  </body>
+  <script src="./index.js"></script>
+</html>
