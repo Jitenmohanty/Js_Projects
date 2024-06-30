@@ -7,19 +7,20 @@ body {
     font-family: sans-serif;
     box-sizing: border-box;
     position: relative;
+    background-color: rgb(19, 35, 59);
 }
 
 nav {
     height: 4.5vw;
-    background-color: black;
+    background-color: rgb(142, 119, 246);
     gap: 5px;
     display: flex;
     align-items: center;
 }
 
 .buttons {
-    width: 90%;
-    gap: 5px;
+    width: 100%;
+    gap: 3px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -27,13 +28,15 @@ nav {
 
 .buttons h1 {
     font-size: larger;
-    color: rgb(208, 208, 76);
+    color: rgb(237, 237, 20);
+    text-transform: uppercase;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .buttons button {
     padding: 10px;
-    color: rgb(22, 22, 22);
-    background-color: rgb(176, 170, 170);
+    color: rgb(243, 231, 231);
+    background-color: rgb(42, 35, 35);
     border: 2px solid yellowgreen;
     text-decoration: none;
     border-radius: 10px;
@@ -75,7 +78,7 @@ main {
     width: 100%;
     object-fit: cover;
     border: 2px solid rgb(253, 253, 113);
-    box-shadow: 10px 0 12px rgb(92, 70, 14);
+    box-shadow: 10px 0 12px rgb(157, 119, 22);
     border-radius: 10px;
     overflow: hidden;
     transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 5s;
@@ -90,12 +93,12 @@ main {
     margin-top: 5vw;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1vw;
+    gap: 1.8vw;
 }
 
 .show {
-    max-height: 25vw;
-    max-width: 20vw;
+    height: 25vw;
+    width: 20vw;
     box-shadow: 10px 2px 14px rgb(162, 182, 162);
     display: flex;
     flex-direction: column;
@@ -106,13 +109,15 @@ main {
 }
 
 .card {
-    max-height: 25vw;
-    max-width: 20vw;
+    height: 25vw;
+    width: 20vw;
     box-shadow: 10px 2px 14px rgb(162, 182, 162);
     border-radius: 10px;
     transform: scale(1);
     transition: all ease-in-out .6s;
+    background-color: wheat;
 }
+
 
 .hide {
     display: none;
@@ -146,7 +151,9 @@ main {
 }
 
 .bottom h2 {
-    font-weight: lighter;
+    font-size: large;
+    font-weight: bold;
+    color: rgb(130, 29, 230);
 }
 
 .description {
@@ -164,6 +171,9 @@ main {
         position: absolute;
         top: -25vw;
         transition: all ease-in-out 1.2s;
+    }
+    nav {
+        height: 7vw;
     }
 
     nav input {
@@ -198,7 +208,7 @@ main {
 
 @media screen and (max-width: 992px) {
     nav {
-        height: 8vw;
+        height: 7vw;
     }
 
     nav h1 {
