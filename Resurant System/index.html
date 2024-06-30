@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- ... -->
+    <!-- Ensure to include Bootstrap CSS as it's checked in the test cases -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- ... -->
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <!-- Navbar toggler for mobile view -->
+      <div class="buttons">
+        <h1>My Resturant</h1>
+      <input type="text" id="search-input" placeholder="Search" class="searchBox" />
+      
+      <!-- Navigation links -->
+      <button data-filter="all">All</button>
+      <button data-filter="stater">Stater</button>
+      <button data-filter="beverage">Beverage</button>
+      <button data-filter="mains">Mains</button>
+      <button data-filter="desserts">Desserts</button>
+      </div>
+      
+      <button class="navbar-toggler">__</button>
+      <!-- Search input -->
+    </nav>
+
+    <!-- Menu items -->
+    <main>
+      <div class="carousel">
+        <img src="img1.jpg" alt="img1" class="carousel-item" />
+        <img src="img2.jpg" alt="img2" class="carousel-item" />
+        <img src="img3.jpg" alt="img3" class="carousel-item" />
+        <img src="img4.jpg" alt="img4" class="carousel-item" />
+      </div>
+
+      <div class="cards stater">
+        <div class="card">
+          <div class="top">
+            <img src="start1.jpg" alt="" />
+          </div>
+          <div class="bottom">
+            <h2>Azino salad</h2>
+            <span>$9</span>
+            <p class="description">Salads with cabbage</p>
+            <p class="category">Catagory stater</p>
+          </div>
+        </div>
+        <div class="card stater">
+          <div class="top">
+            <img src="start3.jpg" alt="" />
+          </div>
+          <div class="bottom ">
+            <h2>Salad prix</h2>
+            <span>$12</span>
+            <p class="description">Salads with avacado</p>
+            <p class="category">Catagory stater</p>
+          </div>
+        </div>
+        <div class="card beverage">
+          <div class="top">
+            <img src="bevrage.jpg" alt="" />
+          </div>
+          <div class="bottom">
+            <h2>Orange moctail</h2>
+            <span>$7</span>
+            <p class="description">Orange juice with Mint</p>
+            <p class="category">Catagory beverage</p>
+          </div>
+        </div>
+        <div class="card mains">
+          <div class="top">
+            <img src="main1.jpg" alt="" />
+          </div>
+          <div class="bottom">
+            <h2>Cabi Spinus</h2>
+            <span>$15</span>
+            <p class="description">Cabbage with sprinkle spinuch...</p>
+            <p class="category">Catagory mains</p>
+          </div>
+        </div>
+        <div class="card mains">
+          <div class="top">
+            <img src="main2.jpg" alt="" />
+          </div>
+          <div class="bottom">
+            <h2>Chicken phuska</h2>
+            <span>$28</span>
+            <p class="description">Chicken with phuska and salads.</p>
+            <p class="category">Catagory mains</p>
+          </div>
+        </div>
+        <div class="card stater">
+          <div class="top">
+            <img src="start2.jpg" alt="" />
+          </div>
+          <div class="bottom">
+            <h2>Caremel chao</h2>
+            <span>$16</span>
+            <p class="description">Caremael with toffie candles</p>
+            <p class="category">Catagory stater</p>
+          </div>
+        </div>
+        <div class="card desserts">
+          <div class="top">
+            <img src="deser3.jpg" alt="" />
+          </div>
+          <div class="bottom">
+            <h2>Cream pauch</h2>
+            <span>$4</span>
+            <p class="description">Creamy pouch with red sortted ponds</p>
+            <p class="category">Catagory desserts</p>
+          </div>
+        </div>
+        <div class="card mains">
+          <div class="top">
+            <img src="bevre4.jpg" alt="" />
+          </div>
+          <div class="bottom">
+            <h2>Creamy coffee</h2>
+            <span>$9</span>
+            <p class="description">Coffee creamy with share with Loves</p>
+            <p class="category">Catagory mains</p>
+          </div>
+        </div>
+        <div class="card desserts">
+          <div class="top">
+            <img src="desert3.jpg" alt="" />
+          </div>
+          <div class="bottom">
+            <h2>Choclate Pestry</h2>
+            <span>$11</span>
+            <p class="description">Balck choclate pestry choco chunks crush</p>
+            <p class="category">Catagory desserts</p>
+          </div>
+        </div>
+        <div class="card mains">
+          <div class="top">
+            <img src="main3.jpg" alt="" />
+          </div>
+          <div class="bottom">
+            <h2>Fish fry</h2>
+            <span>$21</span>
+            <p class="description">Fish fry with salads garnise with veg spouse</p>
+            <p class="category">Catagory mains</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Items will be inserted here by JavaScript -->
+    <script src="app.js"></script>
+
+    <!-- ... (any other required content) -->
+  </body>
+</html>
