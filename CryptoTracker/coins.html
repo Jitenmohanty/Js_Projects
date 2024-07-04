@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -28,11 +29,11 @@
         <div id="coin-details"></div>
         <canvas id="price-chart" class="mt-4"></canvas>
         <div class="mt-4">
-            <button class="btn btn-primary" onclick="loadChart('24h')">24h</button>
-            <button class="btn btn-secondary" onclick="loadChart('30d')">30d</button>
-            <button class="btn btn-success" onclick="loadChart('3m')">3m</button>
+            <button class="btn btn-primary" onclick="loadChart('1')">24h</button>
+            <button class="btn btn-secondary" onclick="loadChart('30')">30d</button>
+            <button class="btn btn-success" onclick="loadChart('90')">3m</button>
         </div>
     </div>
-    <script src="js/coin-details.js"></script>
+    <script src="js/coin-details.js" defer></script>
 </body>
 </html>

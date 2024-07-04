@@ -1,3 +1,4 @@
+const CORS_PROXY = 'https://api.allorigins.win/get?url=';
 const API_URL = 'https://api.coingecko.com/api/v3/coins/markets';
 const PER_PAGE = 100;
 let currentPage = 1;
@@ -16,15 +17,16 @@ document.addEventListener('DOMContentLoaded', () => {
 async function fetchCoins() {
     try {
         document.getElementById('loading').style.display = 'block';
-        const response = await fetch(`${API_URL}?vs_currency=usd&order=market_cap_desc&per_page=${PER_PAGE}&page=${currentPage}&sparkline=false`);
+        const response = await fetch(`${CORS_PROXY}${encodeURIComponent(`${API_URL}?vs_currency=usd&order=market_cap_desc&per_page=${PER_PAGE}&page=${currentPage}&sparkline=false`)}`);
         
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         
         const data = await response.json();
+        const parsedData = JSON.parse(data.contents);
         document.getElementById('loading').style.display = 'none';
-        displayCoins(data);
+        displayCoins(parsedData);
     } catch (error) {
         console.error('Error fetching coins:', error);
         document.getElementById('loading').style.display = 'none';
@@ -44,7 +46,10 @@ function displayCoins(coins) {
                 <img src="${coin.image}" alt="${coin.name}" class="coin-image">
                 ${coin.name} (${coin.symbol.toUpperCase()}): $${coin.current_price}
             </div>
-            <button class="btn btn-outline-primary" onclick="addToFavorites('${coin.id}')">Add to Favorites</button>
+            <div>
+                <button class="btn btn-outline-primary" onclick="addToFavorites('${coin.id}')">Add to Favorites</button>
+                <button class="btn btn-outline-secondary" onclick="goToCoinDetails('${coin.id}')">View Details</button>
+            </div>
         `;
         cryptoList.appendChild(li);
     });
@@ -71,4 +76,8 @@ function addToFavorites(coinId) {
     } else {
         alert('Coin is already in favorites!');
     }
+}
+
+function goToCoinDetails(coinId) {
+    window.location.href = `coins.html?id=${coinId}`;
 }
